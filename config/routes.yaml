@@ -1,0 +1,90 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+homepage:
+    path: /
+    controller: App\Controller\RegisterController::index
+dashboard:
+    path: /dashboard
+    controller: App\Controller\DashboardController::index
+
+app_login:
+    path: /login
+    controller: App\Controller\SecurityController::login
+app_logout:
+    path: /logout
+    controller: App\Controller\SecurityController::logout
+
+
+app_register:
+    path: /register
+    controller: App\Controller\RegisterController::register
+
+
+maquinas:
+    path: /maquinas
+    controller: App\Controller\MaquinaController::index
+recaudaciones:
+    path: /recaudaciones
+    controller: App\Controller\RecaudacionController::index
+videos:
+    path: /videos
+    controller: App\Controller\VideoController::index
+clientes:
+    path: /clientes
+    controller: App\Controller\ClienteController::index
+
+
+
+#Rutas endpoints
+#Maquinas
+nueva_maquina:
+    path: /maquina
+    controller: App\Controller\MaquinaController::newMaquina
+    methods: ['POST']
+leer_maquinas:
+    path: /maquina
+    controller: App\Controller\MaquinaController::getMaquinas
+    methods: ['GET']
+leer_maquina:
+    path: /cliente/{id}
+    controller: App\Controller\ClienteController::getMaquina
+    methods: ['GET']
+actualizar_maquina:
+    path: /maquina/{id}
+    controller: App\Controller\MaquinaController::updateMaquina
+    methods: ['PUT', 'PATCH']
+borrar_maquina:
+    path: /maquina/{id}
+    controller: App\Controller\MaquinaController::borrarMaquina
+    methods: ['DELETE']
+    
+#Recaudacion
+
+#Videos
+
+#Clientes
+nueva_cliente:
+    path: /cliente
+    controller: App\Controller\ClienteController::newCliente
+    methods: ['POST']
+leer_clientes:
+    path: /cliente
+    controller: App\Controller\ClienteController::getClientes
+    methods: ['GET']
+leer_cliente:
+    path: /cliente/{id}
+    controller: App\Controller\ClienteController::getCliente
+    methods: ['GET']
+
+actualizar_cliente:
+    path: /cliente/{id}
+    controller: App\Controller\ClienteController::updateCliente
+    methods: ['PUT', 'PATCH']
+borrar_cliente:
+    path: /cliente/{id}
+    controller: App\Controller\ClienteController::borrarCliente
+    methods: ['DELETE']
